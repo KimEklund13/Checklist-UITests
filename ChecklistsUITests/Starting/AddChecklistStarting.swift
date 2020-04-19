@@ -16,7 +16,7 @@ extension AddChecklistStarting {
 
   func startAddChecklistView() {
     startListView() // launches the app
-    XCUIApplication().navigationBars.buttons[Accessibility.Common.AddButton].tap()
+    XCUIApplication().navigationBars.buttons[Accessibility.Common.AddButton.rawValue].tap()
   }
 
   func configureStartup() {

@@ -9,15 +9,17 @@
 import Foundation
 
 enum Accessibility {
-  enum Common {
-    static let AddButton = "Add"
-    static let CancelButton = "Cancel"
-    static let DoneButton = "Done"
+  enum Common: String {
+    case
+    AddButton = "Add",
+    CancelButton = "Cancel",
+    DoneButton = "Done"
   }
-  enum AddChecklistView {
-    static let AddChecklistTitle = "Add Checklist"
-    static let NameOfListTextField = "Name of the List"
-    static let IconLabel = "Icon"
+  enum AddChecklistView: String {
+    case
+    AddChecklistTitle = "Add Checklist",
+    NameOfListTextField = "Name of the List",
+    IconLabel = "Icon"
   }
   enum ChooseIconView {
     //
@@ -25,21 +27,23 @@ enum Accessibility {
   enum ListView {
     //
   }
-  enum AddItemView {
-    static let BackToChecklistsButton = ""
-    static let ChecklistTitle = "" // get the a11y id
-    static let InfoIcon = ""
+  enum AddItemView: String {
+    case
+    BackToChecklistsButton = "need id",
+    ChecklistTitle = "need id 2", // get the a11y id
+    InfoIcon = "need id 3"
   }
   enum EditItemView {
     //
   }
-  enum AddItemDetailsView {
-    static let AddItemDetailsTitle = "Add Item"
-    static let NameOfItemTextField = "Name of the Item"
-    static let RemindMeSwitch = "Remind Me"
-    static let RemindMeLabel = "Remind Me"
-    static let DueDateLabel = "Due Date"
-    static let SelectedTimeLabel = "" // uses Date() but formatted
-    static let picker = "" // Does this need to have an a11y ID since it just pops up when we tap the Due Date label?
+  enum AddItemDetailsView: String {
+    case
+    AddItemDetailsTitle = "Add Item",
+    NameOfItemTextField = "Name of the Item",
+    RemindMeSwitch = "Remind Me",
+    RemindMeLabel = "Remind Me Label",
+    DueDateLabel = "Due Date Cell",
+    SelectedTimeLabel = "Selected Time Label", // uses Date() but formatted
+    picker = "" // Does this need to have an a11y ID since it just pops up when we tap the Due Date label?
   }
 }

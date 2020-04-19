@@ -164,8 +164,8 @@
 		E1E20653244918AC006218FA /* Starting */ = {
 			isa = PBXGroup;
 			children = (
-				E1E2065824491ECD006218FA /* AppStarting.swift */,
 				E1E2065C24491F7D006218FA /* StartupConfigurable.swift */,
+				E1E2065824491ECD006218FA /* AppStarting.swift */,
 				E1E2065A24491F4F006218FA /* ListViewStarting.swift */,
 				E1E2066024492EB6006218FA /* AddChecklistStarting.swift */,
 				E1E2066424492EFE006218FA /* AddItemViewStarting.swift */,

@@ -25,15 +25,15 @@ extension AddItemViewVerifying {
   }
 
   var backToChecklistsButton: XCUIElement {
-    XCUIApplication().navigationBars.buttons[Accessibility.AddItemView.BackToChecklistsButton]
+    XCUIApplication().navigationBars.buttons[Accessibility.AddItemView.BackToChecklistsButton.rawValue]
   }
 
   var checklistTitle: XCUIElement {
-    XCUIApplication().staticTexts[Accessibility.AddItemView.ChecklistTitle]
+    XCUIApplication().staticTexts[Accessibility.AddItemView.ChecklistTitle.rawValue]
   }
 
   var infoIcon: XCUIElement {
-    XCUIApplication().buttons[Accessibility.AddItemView.InfoIcon]
+    XCUIApplication().buttons[Accessibility.AddItemView.InfoIcon.rawValue]
   }
 
   func getItem(item itemLabel: String) -> XCUIElement {

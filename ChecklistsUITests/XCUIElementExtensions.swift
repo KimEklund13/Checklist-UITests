@@ -1,5 +1,5 @@
 //
-//  HelperMethods.swift
+//  XCUIElementExtensions.swift
 //  ChecklistsUITests
 //
 //  Created by Kim Eklund on 4/16/20.

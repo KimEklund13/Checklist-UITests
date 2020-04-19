@@ -1,5 +1,5 @@
 //
-//  whateverInteracting.swift
+//  AddItemViewInteracting.swift
 //  ChecklistsUITests
 //
 //  Created by Kim Eklund on 4/16/20.
@@ -32,17 +32,13 @@ extension AddItemViewInteracting {
 
   // gets today's date and cuts it, returns it as a string to be used as arg for adjustDatePicker
   func getDateForTomorrow() -> String {
-    let today = Date()
-    let modifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: today)!
-
+    let date = Date().addingTimeInterval(60*60*24)
+    let customFormat = "ddMMM"
+    let locale = Locale.current
+    let format = DateFormatter.dateFormat(fromTemplate: customFormat, options: 0, locale: locale)
     let formatter = DateFormatter()
-    formatter.dateStyle = .medium
-
-    let dateString = formatter.string(from: modifiedDate)
-    let dateFormatted = String(dateString.prefix(6))
-    let dateLocalized = NSLocalizedString(dateFormatted, comment: "Could not get date")
-    print(dateLocalized)
-    return dateLocalized
+    formatter.dateFormat = format
+    return formatter.string(from: date)
   }
   
 }

@@ -9,7 +9,7 @@
 import XCTest
 
 protocol AddItemDetailsVerifying {
-  func someFunc()
+  func dismissNotificationsAlert()
   var addItemDetailsTitle: XCUIElement { get }
   var addItemTextField: XCUIElement { get }
   var remindMeSwitch: XCUIElement { get }
@@ -17,19 +17,23 @@ protocol AddItemDetailsVerifying {
 }
 
 extension AddItemDetailsVerifying {
-  func someFunc() {
-    //
+  func dismissNotificationsAlert() {
+    let app = XCUIApplication()
+    let allowButton = app.alerts.buttons.element(boundBy: 1)
+    if allowButton.exists {
+      allowButton.tap()
+    }
   }
   var addItemDetailsTitle: XCUIElement {
-    XCUIApplication().navigationBars.staticTexts[Accessibility.AddItemDetailsView.AddItemDetailsTitle]
+    XCUIApplication().navigationBars.staticTexts[Accessibility.AddItemDetailsView.AddItemDetailsTitle.rawValue]
   }
   var addItemTextField: XCUIElement {
-    XCUIApplication().textFields[Accessibility.AddItemDetailsView.NameOfItemTextField]
+    XCUIApplication().textFields[Accessibility.AddItemDetailsView.NameOfItemTextField.rawValue]
   }
   var remindMeSwitch: XCUIElement {
-    XCUIApplication().switches[Accessibility.AddItemDetailsView.RemindMeSwitch].firstMatch
+    XCUIApplication().switches[Accessibility.AddItemDetailsView.RemindMeSwitch.rawValue]
   }
   var dueDateLabel: XCUIElement {
-    XCUIApplication().staticTexts[Accessibility.AddItemDetailsView.DueDateLabel]
+    XCUIApplication().staticTexts[Accessibility.AddItemDetailsView.DueDateLabel.rawValue]
   }
 }

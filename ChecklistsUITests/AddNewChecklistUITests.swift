@@ -37,7 +37,7 @@ class AddNewChecklistUITests: AddNewChecklistProtocols {
     XCTAssertFalse(newCheckList.exists)
   }
 
-  func testChecklistsViewElements() {
+  func testEmptyChecklistsViewElements() {
     
   }
 }

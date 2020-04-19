@@ -16,8 +16,5 @@ class UITestCaseSetup: XCTestCase {
 
     // If the test is StartupConfigurable test, then call configureStartup()
     (self as? StartupConfigurable)?.configureStartup()
-
-    // add alert handler here also for ["Allow"] button or whatever.
   }
-
 }

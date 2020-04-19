@@ -8,7 +8,7 @@
 
 import XCTest
 
-protocol AppStarting {
+protocol AppStarting: XCTestCase {
   func startApp()
 }
 
@@ -16,5 +16,17 @@ extension AppStarting {
 
   func startApp() {
     XCUIApplication().launch()
+
+//    addUIInterruptionMonitor(withDescription: "System dialog") { (alert) -> Bool in
+//      // Tap "Allow", not bound by locale
+//      let alertButton = alert.buttons.element(boundBy: 1)
+//      if alertButton.exists {
+//        alertButton.tap()
+//        return true
+//      }
+//      return false
+//    }
+
+    XCUIApplication().tap()
   }
 }

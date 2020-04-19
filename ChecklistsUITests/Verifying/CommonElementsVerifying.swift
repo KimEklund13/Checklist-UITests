@@ -17,14 +17,14 @@ protocol CommonElementsVerifying {
 extension CommonElementsVerifying {
 
   var navDoneButton: XCUIElement {
-    XCUIApplication().navigationBars.buttons[Accessibility.Common.DoneButton]
+    XCUIApplication().navigationBars.buttons[Accessibility.Common.DoneButton.rawValue]
   }
 
   var navAddButton: XCUIElement {
-    XCUIApplication().navigationBars.buttons[Accessibility.Common.AddButton]
+    XCUIApplication().navigationBars.buttons[Accessibility.Common.AddButton.rawValue]
   }
 
   var navCancelButton: XCUIElement {
-    XCUIApplication().navigationBars.buttons[Accessibility.Common.CancelButton]
+    XCUIApplication().navigationBars.buttons[Accessibility.Common.CancelButton.rawValue]
 }
 }

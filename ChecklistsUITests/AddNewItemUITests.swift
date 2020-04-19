@@ -29,6 +29,8 @@ class AddNewItemUITests: AddItemViewProtocols {
     remindMeSwitch.tap()
     XCTAssertTrue(remindMeSwitch.isEnabled)
 
+    dismissNotificationsAlert()
+
     dueDateLabel.tap()
 
     let tomorrowsDate = getDateForTomorrow()

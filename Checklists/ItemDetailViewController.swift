@@ -59,11 +59,20 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
       dueDate = item.dueDate
     }
     updateDueDateLabel()
+    setupAccessibility()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     textField.becomeFirstResponder()
+  }
+
+  private func setupAccessibility() {
+    doneBarButton.accessibilityIdentifier = Accessibility.Common.DoneButton.rawValue
+    textField.accessibilityIdentifier = Accessibility.AddItemDetailsView.NameOfItemTextField.rawValue
+    shouldRemindSwitch.accessibilityIdentifier = Accessibility.AddItemDetailsView.RemindMeSwitch.rawValue
+    dueDateLabel.accessibilityIdentifier = Accessibility.AddItemDetailsView.DueDateLabel.rawValue
+    datePicker.accessibilityIdentifier = Accessibility.AddItemDetailsView.picker.rawValue // currently empty
   }
   
   // MARK:- Actions

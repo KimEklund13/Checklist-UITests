@@ -19,7 +19,7 @@ extension AddChecklistVerifying {
 
   // to be used for navigation tests (page can nav to x)
   func addChecklistViewIsShowing() -> Bool {
-    return addChecklistTitle.exists
+    return addChecklistTitle.waitForExistence(timeout: 3)
       && nameOfListTextField.exists
       && iconLabel.exists
       && navDoneButton.exists
@@ -27,14 +27,14 @@ extension AddChecklistVerifying {
   }
 
   var addChecklistTitle: XCUIElement {
-    XCUIApplication().navigationBars.staticTexts[Accessibility.AddChecklistView.AddChecklistTitle]
+    XCUIApplication().navigationBars.staticTexts[Accessibility.AddChecklistView.AddChecklistTitle.rawValue]
   }
 
   var nameOfListTextField: XCUIElement {
-    XCUIApplication().textFields[Accessibility.AddChecklistView.NameOfListTextField]
+    XCUIApplication().textFields[Accessibility.AddChecklistView.NameOfListTextField.rawValue]
   }
 
   var iconLabel: XCUIElement {
-    XCUIApplication().cells.staticTexts[Accessibility.AddChecklistView.IconLabel]
+    XCUIApplication().cells.staticTexts[Accessibility.AddChecklistView.IconLabel.rawValue]
   }
 }
